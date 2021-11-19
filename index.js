@@ -13,13 +13,12 @@ const port = process.env.PORT || 5000;
 
 
 
-
 var serviceAccount = require("./ema-jhon-fb925-firebase-adminsdk-wqb12-dccc5d934d.json");
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
 });
-
+console.log(serviceAccount)
 //middleware----------------
 app.use(cors());
 app.use(express.json());
